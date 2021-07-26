@@ -1,5 +1,5 @@
 # DList.top Python client
-Official [dlist.top](https://dlist.top) gateway client for Go.
+Official [dlist.top](https://dlist.top) gateway client for Python.
 
 
 ## Installation
