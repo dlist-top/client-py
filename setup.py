@@ -13,5 +13,5 @@ setup(
     # author_email='',
     url='https://github.com/dlist-top/client-py',
     # license=license,
-    packages=find_packages(where='dlist', exclude=('example'))
+    packages=find_packages(where='dlist_top', exclude=('example'))
 )

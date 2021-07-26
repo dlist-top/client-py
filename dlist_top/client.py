@@ -42,7 +42,5 @@ class Client(BaseEventEmitter):
                     self.emit(payload.event.lower(), data)
 
                 else:
-                    print(payload)
-                    
-                
+                    self.logger.debug(f'unsupported OP: {payload.op}')
                 

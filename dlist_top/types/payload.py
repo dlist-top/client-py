@@ -14,6 +14,6 @@ class GatewayPayload(SimpleNamespace):
     data: Any
     event: str
 
-    def __init__(self, **kwargs: Any) -> None:
+    def __init__(self, op, **kwargs: Any) -> None:
         super().__init__(**kwargs)
-        self.op = GatewayOP(kwargs['op'])
+        self.op = GatewayOP(op)
