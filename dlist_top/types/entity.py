@@ -10,3 +10,7 @@ class Entity(SimpleNamespace):
     type: EntityType
     id: str
     name: str
+
+    def __init__(self, type, **kwargs: Any) -> None:
+        super().__init__(**kwargs)
+        self.type = EntityType(type)

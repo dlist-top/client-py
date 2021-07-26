@@ -1,1 +1,1 @@
-gateway_url = 'ws://localhost:7272'
+gateway_url = 'wss://gateway.dlist.top'

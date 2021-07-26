@@ -4,7 +4,7 @@ Official [dlist.top](https://dlist.top) gateway client for Python.
 
 ## Installation
 
-`pip install dlist-top`
+`pip install dlist_top`
 
 ## Setup
 
