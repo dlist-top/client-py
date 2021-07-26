@@ -13,7 +13,7 @@ To get your token please refer to the [DList.top documentation](https://github.c
 
 ## Usage
 
-```
+```py
 from dlist_top import Client
 
 dlist = Client(token='YOUR DLIST TOKEN')
