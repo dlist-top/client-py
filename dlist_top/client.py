@@ -37,6 +37,7 @@ class Client(BaseEventEmitter):
                 elif payload.op == GatewayOP.READY:
                     self.entity = Entity(**payload.data)
                     self.logger.info(f'Ready. Connected to: {self.entity}')
+                    self.emit('ready', self.entity)
 
                 elif payload.op == GatewayOP.EVENT:
                     if payload.event not in event_classes:
