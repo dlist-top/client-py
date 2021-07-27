@@ -1,6 +1,8 @@
+from dlist_top.types.base import Base
 from types import SimpleNamespace
 from typing import Any
 from enum import Enum
+from .base import Base
 
 class GatewayOP(Enum):
     HELLO = 1
@@ -9,11 +11,7 @@ class GatewayOP(Enum):
     DISCONNECT = 4
     EVENT = 5
 
-class GatewayPayload(SimpleNamespace):
+class GatewayPayload(Base):
     op: GatewayOP
     data: Any
     event: str
-
-    def __init__(self, op, **kwargs: Any) -> None:
-        super().__init__(**kwargs)
-        self.op = GatewayOP(op)

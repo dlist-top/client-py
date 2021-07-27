@@ -1,16 +1,11 @@
-from types import SimpleNamespace
-from typing import Any
 from enum import Enum
+from .base import Base
 
 class EntityType(Enum):
     BOT = 'bots'
     SERVER = 'servers'
 
-class Entity(SimpleNamespace):
+class Entity(Base):
     type: EntityType
     id: str
     name: str
-
-    def __init__(self, type, **kwargs: Any) -> None:
-        super().__init__(**kwargs)
-        self.type = EntityType(type)
