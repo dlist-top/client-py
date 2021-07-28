@@ -1,13 +1,14 @@
 import asyncio
+from .event_emitter import EventEmitter
 import websockets
 import json
 import logging
-from pyee import BaseEventEmitter
+from pyee import AsyncIOEventEmitter
 
 from .const import gateway_url
 from .types import Entity, GatewayPayload, GatewayOP, event_classes
 
-class Client(BaseEventEmitter):
+class Client(EventEmitter):
     entity: Entity
 
     def __init__(self, token: str, log_level: int = logging.INFO):
@@ -35,9 +36,10 @@ class Client(BaseEventEmitter):
                     self.logger.debug('Identify packet sent')
 
                 elif payload.op == GatewayOP.READY:
-                    self.entity = Entity(**payload.data)
+                    entity = Entity(**payload.data)
+                    self.entity = entity
                     self.logger.info(f'Ready. Connected to: {self.entity}')
-                    self.emit('ready', self.entity)
+                    self.emit('ready', entity)
 
                 elif payload.op == GatewayOP.EVENT:
                     if payload.event not in event_classes:

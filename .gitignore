@@ -141,4 +141,4 @@ cython_debug/
 
 # Example config file
 
-example/config.py
+tests/config.py

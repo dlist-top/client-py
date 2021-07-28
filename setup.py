@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name='dlist_top',
-    version='0.1.0',
+    version='0.1.1',
     description='DList.top client for Python',
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -17,7 +17,7 @@ setup(
     # author_email='',
     url='https://github.com/dlist-top/client-py',
     license=license,
-    packages=find_packages(where='dlist_top', exclude=('test')),
+    packages=find_packages(where='dlist_top', exclude=('tests')),
     package_dir={"": "dlist_top"},
     python_requires=">=3.8",
 )
