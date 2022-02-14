@@ -9,3 +9,4 @@ class Entity(Base):
     type: EntityType
     id: str
     name: str
+    votes: int
